@@ -1,0 +1,65 @@
+run 200000 2000
+load 0 1000
+load 1 1200
+load 2 0200
+load 3 0900
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+run 100000 2000
+p1 170
+run 100000 2000
+p1 15
+run 100000 2000
+p1 255
+run 50000 2000
+down STP
+run 30000 2000
+up STP
+run 30000 2000
+load 0 1600
+load 1 1200
+load 2 1700
+load 3 1800
+load 4 0900
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+p3 129
+run 100000 2000
+p3 60
+run 100000 2000

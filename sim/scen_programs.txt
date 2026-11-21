@@ -1,0 +1,144 @@
+run 200000 2000
+load 0 042a
+load 1 0200
+load 2 0902
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+run 150000 2000
+down STP
+run 30000 2000
+up STP
+run 30000 2000
+load 0 0400
+load 1 060a
+load 2 050a
+load 3 0200
+load 4 03fa
+load 5 0401
+load 6 070a
+load 7 060a
+load 8 0902
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+run 300000 2000
+down STP
+run 30000 2000
+up STP
+run 30000 2000
+load 0 0401
+load 1 0614
+load 2 0514
+load 3 1200
+load 4 0200
+load 5 03c8
+load 6 0514
+load 7 0a15
+load 8 0b00
+load 9 0714
+load 10 0614
+load 11 0902
+load 21 0080
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+run 400000 2000
+down STP
+run 30000 2000
+up STP
+run 30000 2000
+load 0 0400
+load 1 0616
+load 2 0515
+load 3 0617
+load 4 0517
+load 5 0a18
+load 6 0b0f
+load 7 0819
+load 8 0617
+load 9 0516
+load 10 0714
+load 11 0616
+load 12 0200
+load 13 03c8
+load 14 0904
+load 15 0516
+load 16 0200
+load 17 0911
+load 20 000c
+load 21 0009
+load 24 0000
+load 25 0001
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+run 300000 2000

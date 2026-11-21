@@ -1,0 +1,143 @@
+run 200000 2000
+cross 1
+load 37 0518
+load 38 0678
+load 39 0401
+load 40 0674
+load 41 042b
+load 42 095a
+load 43 050b
+load 44 0678
+load 45 042f
+load 46 095a
+load 47 0400
+load 48 067d
+load 49 0676
+load 50 0677
+load 51 0100
+load 52 0442
+load 53 0675
+load 54 137f
+load 55 0d7b
+load 56 0b3a
+load 57 0100
+load 58 0678
+load 59 137e
+load 60 0d7b
+load 61 0b3f
+load 62 0100
+load 63 0a78
+load 64 0b46
+load 65 0954
+load 66 0450
+load 67 0675
+load 68 0578
+load 69 0954
+load 70 0200
+load 71 077b
+load 72 147e
+load 73 147f
+load 74 0476
+load 75 077d
+load 76 0674
+load 77 1374
+load 78 0779
+load 79 1474
+load 80 057d
+load 81 0e00
+load 82 067d
+load 83 0100
+load 84 0200
+load 85 03ff
+load 86 03ff
+load 87 03ff
+load 88 03ff
+load 89 1575
+load 90 0675
+load 91 0400
+load 92 0600
+load 93 0578
+load 94 1200
+load 95 1000
+load 96 0c7a
+load 97 0b66
+load 98 1474
+load 99 0401
+load 100 0774
+load 101 0674
+load 102 0500
+load 103 0a7c
+load 104 0b73
+load 105 0779
+load 106 0600
+load 107 0578
+load 108 0a7c
+load 109 0b70
+load 110 0779
+load 111 0971
+load 112 0400
+load 113 0678
+load 114 095d
+load 115 1575
+load 121 0001
+load 122 0011
+load 123 0064
+load 124 00ff
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 3
+run 30000 2000
+up 3
+run 30000 2000
+down 7
+run 30000 2000
+up 7
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+run 1000000 5000
+reset
+run 200000 2000
+cross 0
+load 0 0400
+load 1 0614
+load 2 0514
+load 3 0200
+load 4 03fa
+load 5 0a15
+load 6 0b0a
+load 7 0716
+load 8 0614
+load 9 0902
+load 10 090a
+load 21 000a
+load 22 0001
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+run 300000 2000

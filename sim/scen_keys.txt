@@ -1,0 +1,167 @@
+run 200000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 4
+run 30000 2000
+up 4
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 4
+run 30000 2000
+up 4
+run 30000 2000
+down 2
+run 30000 2000
+up 2
+run 30000 2000
+down INP
+run 30000 2000
+up INP
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 2
+run 30000 2000
+up 2
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down INP
+run 30000 2000
+up INP
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 9
+run 30000 2000
+up 9
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 2
+run 30000 2000
+up 2
+run 30000 2000
+down INP
+run 30000 2000
+up INP
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down RUN
+run 30000 2000
+up RUN
+run 30000 2000
+run 200000 2000
+down STP
+run 30000 2000
+up STP
+run 30000 2000
+down ACC
+run 30000 2000
+up ACC
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 0
+run 30000 2000
+up 0
+run 30000 2000
+down 1
+run 30000 2000
+up 1
+run 30000 2000
+down PC
+run 30000 2000
+up PC
+run 30000 2000
+down OUT
+run 30000 2000
+up OUT
+run 30000 2000
+down CLR
+run 30000 2000
+up CLR
+run 30000 2000
+down 1
+run 30000 2000
+up 1
+run 30000 2000
+down 2
+run 30000 2000
+up 2
+run 30000 2000
+down STEP
+run 30000 2000
+up STEP
+run 30000 2000
+down STEP
+run 30000 2000
+up STEP
+run 30000 2000
+down CAL
+run 30000 2000
+up CAL
+run 30000 2000
+down CAS
+run 30000 2000
+up CAS
+run 30000 2000
+run 100000 2000
