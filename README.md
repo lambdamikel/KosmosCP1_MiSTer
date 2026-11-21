@@ -13,7 +13,7 @@ it instruction by instruction (see *Verification*).
 
 ![The core running LIGHTS: the light walks along Port 2, the switches set Port 1, A 00 016 on the display](docs/screenshot.png)
 
-This is version 1.0; the F12 menu shows the version and build date.
+This is version 1.1; the F12 menu shows the version and build date (see *Changes*).
 
 Demo video on YouTube (click the picture):
 
@@ -102,6 +102,15 @@ sim/mkscen.py                         # write the scenarios
 verilator --cc --exe --build --public-flat-rw --top-module cp1 -Mdir sim/obj rtl/cp1.v rtl/i8049.v sim/tb_lockstep.cpp -o tb_lockstep
 sim/obj/tb_lockstep sim/scen_keys.txt > v.txt; sim/jsref.sh sim/scen_keys.txt > j.txt; diff v.txt j.txt
 ```
+
+## Changes
+
+- **1.1:** At power-on the firmware clears the program memory with both 8155s selected at once; both now take
+  the writes, so the CP3's half is cleared too (cell 137 used to keep the 090 of the firmware's CP3 test). Taking the
+  timer interrupt now costs 2 machine cycles, as on the 8049. Both were found by comparing with MAME's `cp1` driver;
+  the browser emulator has the same fixes, and the core, the emulator and a test build of MAME now agree in all six
+  lockstep scenarios.
+- **1.0:** first release.
 
 ## Building
 

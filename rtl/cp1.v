@@ -64,6 +64,8 @@ end
 // ---- ports ----
 wire       sel_pid = !p2[4];
 wire       sel_ext = p2[4] && !p2[5];
+wire       wr_pid  = !p2[4];             // writes reach every selected 8155: the firmware selects both to clear the memory
+wire       wr_ext  = !p2[5];
 wire       iom     = p2[7];
 assign port1 = p1;
 assign port2 = pid_pb;
@@ -120,15 +122,17 @@ always @(posedge clk) begin
 		clr_a <= clr_a + 1'd1;
 		if (clr_a == 9'd255) clearing <= 1'b0;
 	end
-	else if (x_wr && (sel_pid || sel_ext)) begin
+	else if (x_wr && (wr_pid || wr_ext)) begin
 		if (iom) case (x_addr[1:0])
-			2'd0: if (sel_pid) pid_cmd <= x_dout; else ext_cmd <= x_dout;
-			2'd1: if (sel_pid) pid_pa  <= x_dout; else ext_pa  <= x_dout;
-			2'd2: if (sel_pid) pid_pb  <= x_dout; else ext_pb  <= x_dout;
-			2'd3: if (sel_pid) pid_pc  <= x_dout; else ext_pc  <= x_dout;
+			2'd0: begin if (wr_pid) pid_cmd <= x_dout; if (wr_ext) ext_cmd <= x_dout; end
+			2'd1: begin if (wr_pid) pid_pa  <= x_dout; if (wr_ext) ext_pa  <= x_dout; end
+			2'd2: begin if (wr_pid) pid_pb  <= x_dout; if (wr_ext) ext_pb  <= x_dout; end
+			2'd3: begin if (wr_pid) pid_pc  <= x_dout; if (wr_ext) ext_pc  <= x_dout; end
 		endcase
-		else if (sel_pid) pid_ram[x_addr] <= x_dout;
-		else ext_ram[x_addr] <= x_dout;
+		else begin
+			if (wr_pid) pid_ram[x_addr] <= x_dout;
+			if (wr_ext) ext_ram[x_addr] <= x_dout;
+		end
 	end
 	else if (ld_busy) begin                                // second byte of a loaded cell
 		if (ld_ext) ext_ram[{ld_idx, 1'b1}] <= ld_lo; else pid_ram[{ld_idx, 1'b1}] <= ld_lo;

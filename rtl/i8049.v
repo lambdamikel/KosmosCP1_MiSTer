@@ -205,7 +205,7 @@ always @(posedge clk) begin
 		8'h43: begin two <= 1; pc <= pc + 1'd1; a <= a | imm; end
 		8'h53: begin two <= 1; pc <= pc + 1'd1; a <= a & imm; end
 		8'hd3: begin two <= 1; pc <= pc + 1'd1; a <= a ^ imm; end
-		8'h83, 8'h93: begin two <= 1; iaddr <= 7'd8 + {sp - 1'd1, 1'b0}; st <= S_PO0; end           // RET, RETR
+		8'h83, 8'h93: begin two <= 1; iaddr <= 7'd8 + {3'd0, sp - 1'd1, 1'b0}; st <= S_PO0; end           // RET, RETR
 		8'ha3, 8'hb3: begin two <= 1; ra <= {pc[10:8], a}; st <= S_R1; end                          // MOVP A,@A / JMPP @A
 		8'he3: begin two <= 1; ra <= {3'b011, a}; st <= S_R1; end                                    // MOVP3 A,@A
 		8'h05: ext_irq_en <= 1;
@@ -269,12 +269,15 @@ always @(posedge clk) begin
 	S_X2: begin a <= x_din; bus <= x_din; st <= S_T2; end
 
 	// push the pc and the upper PSW (CALL, interrupt), then continue at ret_st
-	S_PU0: begin iwe <= 1; iwa <= 7'd8 + {sp, 1'b0}; iwd <= retpc[7:0]; st <= S_PU1; end
+	S_PU0: begin iwe <= 1; iwa <= 7'd8 + {3'd0, sp, 1'b0}; iwd <= retpc[7:0]; if (irq_next) do_tick; st <= S_PU1; end
 	S_PU1: begin
-		iwe <= 1; iwa <= 7'd9 + {sp, 1'b0};
+		iwe <= 1; iwa <= 7'd9 + {3'd0, sp, 1'b0};
 		iwd <= {psw[7:4], retpc[11:8]};
 		psw[2:0] <= sp + 1'd1;
-		if (irq_next) begin pc <= 12'd7; in_irq <= 1'b1; irq_next <= 1'b0; done <= 1'b1; st <= S_IDLE; end
+		if (irq_next) begin                           // taking the interrupt costs 2 machine cycles, like a CALL;
+			do_tick;                                   // an overflow during them is dropped (MAME: burn_cycles, then the flag is reset)
+			timer_irq <= 1'b0; pc <= 12'd7; in_irq <= 1'b1; irq_next <= 1'b0; done <= 1'b1; st <= S_IDLE;
+		end
 		else st <= ret_st;
 	end
 

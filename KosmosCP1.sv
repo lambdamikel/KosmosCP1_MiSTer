@@ -67,8 +67,8 @@ localparam CONF_STR = {
 	"-;",
 	"R[0],Reset;",
 	"-;",
-	"-,Version 1.0 - build ",`BUILD_DATE,";",
-	"V,v1.0-",`BUILD_DATE
+	"-,Version 1.1 - build ",`BUILD_DATE,";",
+	"V,v1.1-",`BUILD_DATE
 };
 
 wire         forced_scandoubler;
