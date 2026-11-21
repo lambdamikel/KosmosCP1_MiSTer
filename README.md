@@ -15,6 +15,10 @@ it instruction by instruction (see *Verification*).
 
 This is version 1.0; the F12 menu shows the version and build date.
 
+Demo video on YouTube (click the picture):
+
+[![Demo video: the Kosmos CP1 core on the MiSTer DE10-Nano](https://img.youtube.com/vi/2X4fNmy3p84/maxresdefault.jpg)](https://www.youtube.com/watch?v=2X4fNmy3p84)
+
 ## Installation
 
 - Copy `releases/KosmosCP1_<date>.rbf` to `_Computer/` on the SD card.
