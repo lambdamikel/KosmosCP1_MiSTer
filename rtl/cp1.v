@@ -75,11 +75,11 @@ wire [7:0] xw = xwire ? { pid_pb[5], pid_pb[4], pid_pb[6], pid_pb[7], pid_pb[1],
 assign port1_pins = port1_in & xw;
 
 // keypad: the columns of the first selected row
-integer i;
+integer i, ki;
 always @* begin
 	keynib = 4'd0;
-	for (i = 7; i >= 0; i = i - 1)
-		if (!pid_pc[i]) keynib = (i < 5) ? keys[i*4 +: 4] : 4'd0;
+	for (ki = 7; ki >= 0; ki = ki - 1)
+		if (!pid_pc[ki]) keynib = (ki < 5) ? keys[ki*4 +: 4] : 4'd0;
 end
 
 // ---- bus ----
@@ -140,15 +140,17 @@ always @(posedge clk) begin
 	end
 end
 
-// ---- display: segment on-time per machine cycle, over windows of 4096 cycles ----
-reg [11:0] wcnt;
-reg [12:0] scnt[0:47];
+// ---- display: segment on-time per machine cycle, over windows of 16384 cycles (41 ms) ----
+// The firmware shows each digit for a long stretch, so a shorter window can miss a digit altogether.
+reg [13:0] wcnt;
+reg [14:0] scnt[0:47];
 integer d, b;
-function [7:0] level(input [12:0] n);              // a digit lit 1/8 of the time or more is full
-	level = (n[12:9] != 0) ? 8'd255 : n[8:1];
+function [7:0] level(input [14:0] n);              // a digit lit 1/14 of the time or more is full (as the emulator)
+	reg [17:0] v;
+	begin v = {3'd0, n} * 18'd7 >> 5; level = (v > 18'd255) ? 8'd255 : v[7:0]; end
 endfunction
 always @(posedge clk) if (tick) begin
-	if (wcnt == 12'd4095) begin
+	if (wcnt == 14'd16383) begin
 		for (i = 0; i < 48; i = i + 1) begin seg_level[i*8 +: 8] <= level(scnt[i]); scnt[i] <= 0; end
 		wcnt <= 0;
 	end else begin

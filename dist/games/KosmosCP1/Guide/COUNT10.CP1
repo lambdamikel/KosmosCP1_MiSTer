@@ -1,0 +1,17 @@
+# Count 0, 1, 2 ... 10 and stop: a loop with a decision.
+# Start: 000 PC RUN
+# Cell 020 is the counter, 021 the limit, 022 the step.
+
+000 ako 04.000
+001 abs 06.020
+002 lda 05.020
+003 anz 02.000
+004 vzg 03.250
+005 vgl 10.021
+006 spb 11.010
+007 add 07.022
+008 abs 06.020
+009 spu 09.002
+010 spu 09.010
+021     00.010
+022     00.001

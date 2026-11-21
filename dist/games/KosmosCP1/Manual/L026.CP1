@@ -1,0 +1,20 @@
+# Listing 26: Schiebeprogramm
+# Start: 088 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+088 lia 19.100
+089 ais 20.101
+090 lda 05.101
+091 sub 08.103
+092 abs 06.101
+093 lda 05.100
+094 sub 08.103
+095 abs 06.100
+096 vkl 13.102
+097 spb 11.099
+098 spu 09.088
+099 hlt 01.000
+100     00.007
+101     00.013
+102     00.001
+103     00.001

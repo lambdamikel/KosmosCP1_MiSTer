@@ -1,0 +1,14 @@
+# Switch piano for the Kosmos CP1 (written for this emulator, not from the manual).
+# Start: 000 PC RUN.  MiSTer menu: Tone generators on Port 2 = On
+# Contact clips on Port 1 line(s) 1, 2, 3, 4, 5, 6, 7, 8: hold Shift + the line number to press one.
+# Each Port 1 switch is a key: switch 1 = c, 2 = d, 3 = e, 4 = f, 5 = g, 6 = a, 7 = h (b), 8 = high c.
+# Put a switch DOWN (or hold its contact clip) to sound the note; several at once give a chord.
+# The notes come from the tone generators on Port 2, wired as in the manual's melody generator.
+
+000 p1e 16.000
+001 abs 06.020
+002 ako 04.255
+003 sub 08.020
+004 p2a 18.000
+005 anz 02.000
+006 spu 09.000

@@ -1,0 +1,13 @@
+# Listing 24: 1-Minuten-Verzögerung
+# Start: 068 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+068 vzg 03.250
+069 lda 05.100
+070 sub 08.101
+071 abs 06.100
+072 vgr 12.102
+073 spb 11.068
+100     00.240
+101     00.001
+102     00.000

@@ -1,0 +1,19 @@
+# With Port 2 wired back to Port 1 in scrambled order (the "random-number wiring"), a plain counter
+# Start: 000 PC RUN.  MiSTer menu: Random-number wiring = On
+# turns into a jumbled sequence: write the counter to Port 2, read it back from Port 1, show it.
+
+000 ako 04.000
+001 abs 06.020
+002 lda 05.020
+003 p2a 18.000
+004 p1e 16.000
+005 anz 02.000
+006 vzg 03.250
+007 lda 05.020
+008 vgl 10.022
+009 spb 11.000
+010 add 07.021
+011 abs 06.020
+012 spu 09.002
+021     00.001
+022     00.255

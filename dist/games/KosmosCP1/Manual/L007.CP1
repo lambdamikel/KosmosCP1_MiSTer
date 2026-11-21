@@ -1,0 +1,13 @@
+# Listing 7: Würfelprogramm mit VGR
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.001
+002 abs 06.101
+003 abs 06.000
+004 add 07.101
+005 vgr 12.100
+006 spb 11.001
+007 spu 09.003
+100     00.006
+101     00.001

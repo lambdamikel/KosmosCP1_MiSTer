@@ -63,3 +63,7 @@ c5_pin_model_dump.txt
 **/.DS_Store
 sim/__pycache__/
 sim/tmp*.html
+sim/objl/
+sim/objv/
+sim/__pycache__/
+tools/__pycache__/

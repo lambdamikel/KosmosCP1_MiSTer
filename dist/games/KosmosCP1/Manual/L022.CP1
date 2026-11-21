@@ -1,0 +1,26 @@
+# Listing 22: Multiplikation 25 x 9
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.000
+002 abs 06.100
+003 abs 06.101
+004 ako 04.001
+005 abs 06.102
+006 lda 05.100
+007 add 07.103
+008 abs 06.100
+009 lda 05.101
+010 add 07.102
+011 abs 06.101
+012 vgl 10.104
+013 lda 05.100
+014 spb 11.016
+015 spu 09.007
+016 anz 02.000
+017 spu 09.016
+100     00.000
+101     00.000
+102     00.001
+103     00.025
+104     00.009

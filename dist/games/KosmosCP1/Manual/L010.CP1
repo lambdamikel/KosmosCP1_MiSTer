@@ -1,0 +1,11 @@
+# Listing 10: Einfacher Blinker
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.000
+002 p1a 17.001
+003 vzg 03.100
+004 ako 04.001
+005 p1a 17.001
+006 vzg 03.100
+007 spu 09.001

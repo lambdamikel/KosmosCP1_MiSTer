@@ -1,0 +1,8 @@
+# Port echo for the Kosmos CP1: whatever is set on the Port 1 switches appears on the Port 2 LEDs,
+# Start: 000 PC RUN
+# and the value is shown on the display.
+
+000 p1e 16.000
+001 p2a 18.000
+002 anz 02.000
+003 spu 09.000

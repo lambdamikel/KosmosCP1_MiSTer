@@ -1,0 +1,34 @@
+# Listing 20: Reisebüro-Computer
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.001
+002 abs 06.123
+003 ako 04.000
+004 abs 06.124
+005 abs 06.126
+006 ako 04.119
+007 abs 06.125
+008 ako 04.030
+009 abs 06.127
+010 lia 19.127
+011 vgl 10.124
+012 spb 11.019
+013 lda 05.127
+014 add 07.123
+015 abs 06.127
+016 vgr 12.125
+017 spb 11.023
+018 spu 09.010
+019 lda 05.126
+020 add 07.123
+021 abs 06.126
+022 spu 09.013
+023 lda 05.126
+024 anz 02.000
+025 spu 09.024
+123     00.001
+124     00.000
+125     00.119
+126     00.000
+127     00.030

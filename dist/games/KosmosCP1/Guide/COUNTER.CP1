@@ -1,0 +1,13 @@
+# Counter for the Kosmos CP1: counts 0, 1, 2, ... on the display, about four steps a second.
+# Start: 000 PC RUN
+# Cell 010 holds the count.
+
+000 ako 04.000
+001 abs 06.010
+002 lda 05.010
+003 anz 02.000
+004 vzg 03.250
+005 ako 04.001
+006 add 07.010
+007 abs 06.010
+008 spu 09.002

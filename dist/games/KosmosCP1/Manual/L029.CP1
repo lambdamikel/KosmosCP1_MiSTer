@@ -1,0 +1,32 @@
+# Listing 29: Reaktionstester mit variabler Vorlaufzeit
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+000     00.000
+001 ako 04.001
+002 abs 06.102
+003 ako 04.000
+004 abs 06.101
+005 ako 04.010
+006 abs 06.100
+007 lda 05.000
+008 vgr 12.100
+009 spb 11.011
+010 spu 09.013
+011 sub 08.100
+012 spu 09.008
+013 vgl 10.101
+014 vzg 03.200
+015 spb 11.018
+016 sub 08.102
+017 spu 09.013
+018 ako 04.000
+019 anz 02.000
+020 add 07.102
+021 anz 02.000
+022 abs 06.000
+023 vzg 03.005
+024 spu 09.020
+100     00.010
+101     00.000
+102     00.001

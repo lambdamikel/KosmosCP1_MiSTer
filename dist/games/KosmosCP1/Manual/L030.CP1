@@ -1,0 +1,42 @@
+# Listing 30: Telefonzeittakt-Gebührenanzeiger
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+000     00.000
+001 ako 04.000
+002 abs 06.100
+003 ako 04.001
+004 abs 06.101
+005 ako 04.023
+006 abs 06.102
+007 abs 06.105
+008 ako 04.008
+009 abs 06.103
+010 ako 04.240
+011 abs 06.104
+012 lda 05.105
+013 anz 02.000
+014 abs 06.000
+015 lda 05.104
+016 vzg 03.219
+017 sub 08.101
+018 abs 06.104
+019 vgl 10.100
+020 spb 11.022
+021 spu 09.015
+022 lda 05.103
+023 sub 08.101
+024 abs 06.103
+025 vgl 10.100
+026 spb 11.028
+027 spu 09.010
+028 lda 05.105
+029 add 07.102
+030 abs 06.105
+031 spu 09.008
+100     00.000
+101     00.001
+102     00.023
+103     00.008
+104     00.000
+105     00.000

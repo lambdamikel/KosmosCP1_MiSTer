@@ -1,0 +1,25 @@
+# Listing 1: Speicherzellen-Inhalte automatisch anzeigen
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 lda 05.100
+002 anz 02.000
+003 vzg 03.250
+004 lda 05.101
+005 anz 02.000
+006 vzg 03.250
+007 lda 05.102
+008 anz 02.000
+009 vzg 03.250
+010 lda 05.103
+011 anz 02.000
+012 vzg 03.250
+013 lda 05.104
+014 anz 02.000
+015 vzg 03.250
+016 hlt 01.000
+100     00.011
+101     00.022
+102     00.033
+103     00.044
+104     00.055

@@ -1,0 +1,11 @@
+# Listing 2: Akku-Inhalt automatisch speichern
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.178
+002 abs 06.100
+003 abs 06.101
+004 abs 06.102
+005 abs 06.103
+006 abs 06.104
+007 hlt 01.000

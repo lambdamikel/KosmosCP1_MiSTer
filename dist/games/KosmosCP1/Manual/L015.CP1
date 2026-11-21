@@ -1,0 +1,9 @@
+# Listing 15: Prüfprogramm für Negation
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.001
+002 anz 02.000
+003 vzg 03.250
+004 neg 14.000
+005 spu 09.002

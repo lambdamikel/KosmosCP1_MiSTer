@@ -1,0 +1,34 @@
+# CP5-Listing 3: Wanderndes Lichtband
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 lia 19.028
+002 p2a 18.000
+003 vzg 03.030
+004 lda 05.028
+005 vgl 10.029
+006 spb 11.010
+007 add 07.020
+008 abs 06.028
+009 spu 09.001
+010 sub 08.020
+011 abs 06.028
+012 vgl 10.030
+013 spb 11.001
+014 lia 19.028
+015 p2a 18.000
+016 vzg 03.030
+017 lda 05.028
+018 spu 09.010
+019     00.000
+020     00.001
+021     00.003
+022     00.007
+023     00.015
+024     00.031
+025     00.063
+026     00.127
+027     00.255
+028     00.019
+029     00.027
+030     00.019

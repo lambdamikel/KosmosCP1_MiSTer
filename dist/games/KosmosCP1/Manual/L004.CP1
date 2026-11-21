@@ -1,0 +1,15 @@
+# Listing 4: Unendlicher Zähler
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 lda 05.100
+002 anz 02.000
+003 vzg 03.250
+004 add 07.100
+005 anz 02.000
+006 vzg 03.250
+007 vgl 10.101
+008 spb 11.001
+009 spu 09.004
+100     00.001
+101     00.025

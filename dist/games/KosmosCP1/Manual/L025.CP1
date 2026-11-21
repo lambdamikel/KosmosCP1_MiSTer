@@ -1,0 +1,13 @@
+# Listing 25: Rucksackprogramm
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.001
+002 abs 06.101
+003 abs 06.000
+004 spu 09.007
+005 spb 11.001
+006 spu 09.003
+007 add 07.101
+008 vgl 10.100
+009 spu 09.005

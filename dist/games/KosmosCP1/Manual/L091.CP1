@@ -1,0 +1,8 @@
+# CP5-Listing 2: Schalter-Test
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 p1e 16.000
+002 anz 02.000
+003 p2a 18.000
+004 spu 09.001

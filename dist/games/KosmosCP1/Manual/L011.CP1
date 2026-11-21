@@ -1,0 +1,15 @@
+# Listing 11: Wechselblinker
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.000
+002 p1a 17.001
+003 ako 04.001
+004 p1a 17.002
+005 vzg 03.250
+006 ako 04.001
+007 p1a 17.001
+008 ako 04.000
+009 p1a 17.002
+010 vzg 03.250
+011 spu 09.001

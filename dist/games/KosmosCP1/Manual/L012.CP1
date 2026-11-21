@@ -1,0 +1,35 @@
+# Listing 12: Wechselblinker mit externer Start/Stop-Taste
+# Start: 001 PC RUN
+# Contact clips on Port 1 line(s) 8: hold Shift + the line number to press one.
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.000
+002 p1a 17.001
+003 p1a 17.002
+004 p1e 16.008
+005 vgl 10.100
+006 spb 11.008
+007 spu 09.004
+008 p1e 16.008
+009 vgl 10.101
+010 spb 11.012
+011 spu 09.008
+012 ako 04.001
+013 p1a 17.001
+014 ako 04.000
+015 p1a 17.002
+016 vzg 03.250
+017 ako 04.000
+018 p1a 17.001
+019 ako 04.001
+020 p1a 17.002
+021 vzg 03.250
+022 p1e 16.008
+023 vgl 10.100
+024 spb 11.026
+025 spu 09.012
+026 vzg 03.250
+027 vzg 03.250
+028 spu 09.004
+100     00.000
+101     00.001

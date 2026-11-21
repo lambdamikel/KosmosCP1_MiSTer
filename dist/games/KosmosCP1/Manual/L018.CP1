@@ -1,0 +1,11 @@
+# Listing 18: Blinkprogramm mit zwei Lämpchen im Parallelbetrieb
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.000
+002 p1a 17.000
+003 vzg 03.250
+004 ako 04.003
+005 p1a 17.000
+006 vzg 03.250
+007 spu 09.001

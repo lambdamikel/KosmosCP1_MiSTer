@@ -1,0 +1,26 @@
+# Listing 23: Division
+# Start: 001 PC RUN
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+000     00.000
+001 ako 04.000
+002 abs 06.102
+003 abs 06.101
+004 ako 04.103
+005 lda 05.100
+006 abs 06.000
+007 lda 05.000
+008 vkl 13.101
+009 spb 11.016
+010 sub 08.101
+011 abs 06.000
+012 lda 05.102
+013 add 07.103
+014 abs 06.102
+015 spu 09.007
+016 lda 05.102
+017 anz 02.000
+018 spu 09.016
+100     00.000
+101     00.000
+102     00.000

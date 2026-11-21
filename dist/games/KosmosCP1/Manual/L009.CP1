@@ -1,0 +1,34 @@
+# Listing 9: Stoppuhr mit externer Start/Stop-Taste
+# Start: 001 PC RUN
+# Contact clips on Port 1 line(s) 8: hold Shift + the line number to press one.
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.000
+002 abs 06.100
+003 abs 06.102
+004 ako 04.001
+005 abs 06.101
+006 p1e 16.008
+007 vgl 10.100
+008 spb 11.010
+009 spu 09.006
+010 p1e 16.008
+011 vgl 10.101
+012 spb 11.014
+013 spu 09.010
+014 lda 05.102
+015 add 07.101
+016 abs 06.102
+017 anz 02.000
+018 vzg 03.087
+019 p1e 16.008
+020 vgl 10.100
+021 lda 05.102
+022 spb 11.024
+023 spu 09.015
+024 anz 02.000
+025 vzg 03.250
+026 vzg 03.250
+027 spu 09.001
+100     00.000
+101     00.001

@@ -1,0 +1,37 @@
+# Listing 19: Automatisch speichernder Lottozahlen-Generator
+# Start: 007 PC RUN
+# Contact clips on Port 1 line(s) 1: hold Shift + the line number to press one.
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.001
+002 abs 06.100
+003 ako 04.030
+004 abs 06.104
+005 ako 04.049
+006 abs 06.101
+007 ako 04.000
+008 abs 06.103
+009 abs 06.102
+010 add 07.100
+011 anz 02.000
+012 abs 06.102
+013 p1e 16.001
+014 vgr 12.103
+015 lda 05.102
+016 spb 11.025
+017 ais 20.104
+018 lda 05.104
+019 add 07.100
+020 abs 06.104
+021 p1e 16.001
+022 vgl 10.103
+023 spb 11.021
+024 spu 09.007
+025 vgl 10.101
+026 spb 11.007
+027 spu 09.010
+100     00.001
+101     00.049
+102     00.000
+103     00.000
+104     00.030

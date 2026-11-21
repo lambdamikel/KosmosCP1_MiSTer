@@ -1,0 +1,31 @@
+# CP5-Listing 4: Lichtpunkt fangen
+# Start: 001 PC RUN
+# Contact clips on Port 1 line(s) 1, 2, 3, 4, 5, 6, 7, 8: hold Shift + the line number to press one.
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.128
+002 abs 06.101
+003 ako 04.001
+004 abs 06.100
+005 p1e 16.000
+006 abs 06.102
+007 ako 04.255
+008 sub 08.102
+009 vgl 10.100
+010 spb 11.020
+011 lda 05.100
+012 p2a 18.000
+013 vzg 03.050
+014 p1e 16.000
+015 abs 06.102
+016 ako 04.255
+017 sub 08.102
+018 vgl 10.100
+019 spb 11.025
+020 lda 05.100
+021 vgl 10.101
+022 spb 11.003
+023 add 07.100
+024 spu 09.004
+025 hlt 01.000
+026 spu 09.001

@@ -1,0 +1,67 @@
+# Listing 21: Countdown
+# Start: 001 PC RUN
+# Contact clips on Port 1 line(s) 7, 8: hold Shift + the line number to press one.
+# From the Kosmos CP1 manual, as transcribed by Andreas Signer (github.com/asig/kosmos-cp1).
+
+001 ako 04.000
+002 abs 06.100
+003 ako 04.001
+004 abs 06.101
+005 ako 04.240
+006 abs 06.102
+007 anz 02.000
+008 vzg 03.250
+009 vzg 03.250
+010 ako 04.015
+011 abs 06.103
+012 p1e 16.008
+013 vgl 10.100
+014 spb 11.050
+015 vzg 03.250
+016 vzg 03.250
+017 lda 05.102
+018 sub 08.101
+019 anz 02.000
+020 vgl 10.100
+021 spb 11.070
+022 abs 06.102
+023 ako 04.000
+024 p2a 18.001
+025 vzg 03.250
+026 neg 14.000
+027 p2a 18.001
+028 vzg 03.250
+029 ako 04.034
+030 abs 06.103
+031 p1e 16.008
+032 vgl 10.100
+033 spb 11.050
+034 ako 04.001
+035 p2a 18.002
+036 vzg 03.250
+037 neg 14.000
+038 p2a 18.002
+039 vzg 03.250
+040 ako 04.045
+041 abs 06.103
+042 p1e 16.008
+043 vgl 10.100
+044 spb 11.050
+045 spu 09.017
+050 ako 04.001
+051 p2a 18.002
+052 vzg 03.250
+053 neg 14.000
+054 p2a 18.003
+055 vzg 03.250
+056 p1e 16.007
+057 vgr 12.100
+058 spb 11.050
+059 siu 21.103
+070 ako 04.001
+071 p2a 18.003
+072 hlt 01.000
+100     00.000
+101     00.001
+102     00.000
+103     00.000
