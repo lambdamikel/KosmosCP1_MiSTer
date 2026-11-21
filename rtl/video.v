@@ -82,21 +82,25 @@ function [9:0] digx(input [2:0] d);
 	case (d) 3'd0: digx = 0; 3'd1: digx = 56; 3'd2: digx = 96; 3'd3: digx = 152; 3'd4: digx = 192; default: digx = 232; endcase
 endfunction
 
-// keys: index -> centre x, text row (key = row*16-4 .. +27), half width, key bit
+// keys: index -> centre x, text row (key = row*16-5 .. +22), half width, key bit.
+// One grid: columns 40 pixels apart, keys 36 wide (4-pixel gaps, as between the rows), 10 pixels
+// from the panel edge.  Digit row = columns 0-9 from x 54; STEP STP RUN CAL span columns 1-2, 3-4,
+// 5-6, 7-8; CLR ACC CAS and PC OUT INP span 2-3, 4-5, 6-7; the number block has its own three
+// columns from x 470, 20 pixels right of the 9, and its 0 spans the first two.
 function [33:0] key(input [4:0] k);     // {cx[9:0], row[4:0], hw[6:0], bit[4:0], valid, pad[5:0]}
 	reg [9:0] cx; reg [4:0] row; reg [6:0] hw; reg [4:0] b;
 	begin
-		if (k < 10) begin cx = 10'd64 + 36*k; row = 17; hw = 16;
+		if (k < 10) begin cx = 10'd72 + 40*k; row = 17; hw = 18;
 			case (k) 0: b = 16; 1: b = 17; 2: b = 18; 3: b = 19; 4: b = 12; 5: b = 13; 6: b = 14; 7: b = 15; 8: b = 8; default: b = 9; endcase end
-		else if (k < 14) begin cx = 10'd100 + 80*(k-10); row = 19; hw = 36;                // STEP STP RUN CAL
+		else if (k < 14) begin cx = 10'd132 + 80*(k-10); row = 19; hw = 38;                // STEP STP RUN CAL
 			case (k) 10: b = 5; 11: b = 6; 12: b = 7; default: b = 4; endcase end
-		else if (k < 17) begin cx = 10'd140 + 80*(k-14); row = 21; hw = 36;                // CLR ACC CAS
+		else if (k < 17) begin cx = 10'd172 + 80*(k-14); row = 21; hw = 38;                // CLR ACC CAS
 			case (k) 14: b = 1; 15: b = 3; default: b = 0; endcase end
-		else if (k < 20) begin cx = 10'd140 + 80*(k-17); row = 23; hw = 36;                // PC OUT INP
+		else if (k < 20) begin cx = 10'd172 + 80*(k-17); row = 23; hw = 38;                // PC OUT INP
 			case (k) 17: b = 2; 18: b = 10; default: b = 11; endcase end
-		else if (k < 29) begin cx = 10'd472 + 44*((k-20) % 3); row = 17 + 2*((k-20) / 3); hw = 18;   // 7 8 9 / 4 5 6 / 1 2 3
+		else if (k < 29) begin cx = 10'd488 + 40*((k-20) % 3); row = 17 + 2*((k-20) / 3); hw = 18;   // 7 8 9 / 4 5 6 / 1 2 3
 			case (k) 20: b = 15; 21: b = 8; 22: b = 9; 23: b = 12; 24: b = 13; 25: b = 14; 26: b = 17; 27: b = 18; default: b = 19; endcase end
-		else begin cx = 10'd496; row = 23; hw = 40; b = 16; end                            // 0
+		else begin cx = 10'd508; row = 23; hw = 38; b = 16; end                            // 0
 		key = {cx, row, hw, b, 1'b1, 6'd0};
 	end
 endfunction
@@ -150,14 +154,14 @@ always @* begin
 		end
 	end
 	// kosmos plate in a speaker grille
-	if (inbox(h2, v2, 372, 144, 595, 231)) px = (v2[2:0] < 3'd3) ? C_GRILL : C_CASE;
+	if (inbox(h2, v2, 370, 144, 597, 231)) px = (v2[2:0] < 3'd3) ? C_GRILL : C_CASE;
 	if (inbox(h2, v2, 404, 172, 563, 211)) px = C_CASE;
 	// keypad
-	if (inbox(h2, v2, 40, 256, 599, 403)) px = (h2 < 42 || h2 > 597 || v2 < 258 || v2 > 401) ? 24'h080808 : C_PAD;
+	if (inbox(h2, v2, 42, 255, 597, 402)) px = (h2 < 44 || h2 > 595 || v2 < 257 || v2 > 400) ? 24'h080808 : C_PAD;
 	for (k = 0; k < 30; k = k + 1) begin
 		kk = key(k);
 		kx0 = kk[33:24] - kk[18:12]; kx1 = kk[33:24] + kk[18:12] - 1'd1;
-		ky0 = {kk[23:19], 4'd0} - 10'd4; ky1 = ky0 + 10'd27;
+		ky0 = {kk[23:19], 4'd0} - 10'd5; ky1 = ky0 + 10'd27;
 		if (inbox(h2, v2, kx0, ky0, kx1, ky1))
 			px = keys[kk[11:7]] ? C_KEYDN :
 			     (v2 <= ky0 + 1 || h2 <= kx0 + 1) ? C_KEYHI :
